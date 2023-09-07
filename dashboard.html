@@ -19,7 +19,36 @@
   </section>
 
   <script>
-    // Placeholder for Chart.js code to generate charts
+   // JavaScript code for generating charts using Chart.js
+
+// Live Usage Stats Chart
+const liveStatsCtx = document.getElementById('liveStatsChart').getContext('2d');
+const liveStatsChart = new Chart(liveStatsCtx, {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    datasets: [{
+      label: 'Live Usage',
+      data: [12, 19, 3, 5, 2],
+      backgroundColor: 'rgba(75, 192, 192, 0.2)',
+      borderColor: 'rgba(75, 192, 192, 1)',
+      borderWidth: 1
+    }]
+  }
+});
+
+// Sentiment Analysis Chart
+const sentimentCtx = document.getElementById('sentimentAnalysisChart').getContext('2d');
+const sentimentChart = new Chart(sentimentCtx, {
+  type: 'pie',
+  data: {
+    labels: ['Positive', 'Neutral', 'Negative'],
+    datasets: [{
+      data: [50, 30, 20],
+      backgroundColor: ['rgba(0, 255, 0, 0.5)', 'rgba(255, 255, 0, 0.5)', 'rgba(255, 0, 0, 0.5)']
+    }]
+  }
+});
   </script>
 
 </body>
